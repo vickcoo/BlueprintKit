@@ -7,3 +7,14 @@ node_modules/
 dist/
 build/
 coverage/
+
+# Internal planning documents (private)
+LAUNCH_INSTRUCTIONS.md
+PRODUCT_HUNT_LAUNCH.md
+NEXT_STEPS.md
+QUICK_START_GUIDE.md
+DEPLOYMENT_GUIDE.md
+LAUNCH_PLAN.md
+PROGRESS_REPORT.md
+market-research.md
+FINAL_SUMMARY.md
