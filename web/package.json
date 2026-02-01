@@ -1,7 +1,7 @@
 {
-  "name": "devkit-web",
+  "name": "blueprintkit-web",
   "version": "0.1.0",
-  "description": "DevKit - AI-powered templates that save developers 4-8 hours per project",
+  "description": "BlueprintKit - AI-powered templates that save developers 4-8 hours per project",
   "private": true,
   "scripts": {
     "dev": "next dev",

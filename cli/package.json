@@ -45,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/vickcoo/devkit/issues"
   },
-  "homepage": "https://devkit.dev",
+  "homepage": "https://blueprintkit.dev",
   "dependencies": {
     "commander": "^11.1.0",
     "inquirer": "^8.2.5",

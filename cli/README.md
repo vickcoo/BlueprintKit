@@ -1,11 +1,12 @@
-# DevKit CLI
+# BlueprintKit CLI
 
 > Scaffold production-ready projects in seconds with AI-powered templates.
 
-[![npm version](https://badge.fury.io/js/%40devkit%2Fcli.svg)](https://www.npmjs.com/package/blueprintkit)
+[![npm version](https://img.shields.io/npm/v/blueprintkit.svg)](https://www.npmjs.com/package/blueprintkit)
+[![Downloads](https://img.shields.io/npm/dm/blueprintkit.svg)](https://www.npmjs.com/package/blueprintkit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-DevKit is a powerful CLI tool that helps developers scaffold production-ready projects instantly. Skip the boilerplate and start building features on day one.
+BlueprintKit is a powerful CLI tool that helps developers scaffold production-ready projects instantly. Skip the boilerplate and start building features on day one.
 
 ## ✨ Features
 
@@ -74,7 +75,7 @@ npx blueprintkit list
 npx blueprintkit config
 ```
 
-## 🎯 Why DevKit?
+## 🎯 Why BlueprintKit?
 
 Traditional project setup takes 4-8 hours on average:
 - ❌ Researching best practices
@@ -83,7 +84,7 @@ Traditional project setup takes 4-8 hours on average:
 - ❌ Configuring linters and formatters
 - ❌ Writing boilerplate code
 
-DevKit does all of this in seconds:
+BlueprintKit does all of this in seconds:
 - ✅ Production-ready templates
 - ✅ Best practices built-in
 - ✅ Modern tech stacks
@@ -96,7 +97,7 @@ DevKit does all of this in seconds:
 
 ## 📚 Documentation
 
-Visit [devkit.dev](https://devkit.dev) for full documentation and examples.
+Visit [blueprintkit.dev](https://blueprintkit.dev) for full documentation and examples.
 
 ## 🤝 Contributing
 
@@ -108,8 +109,8 @@ MIT © Vick
 
 ## 🔗 Links
 
-- [Website](https://devkit.dev)
-- [Documentation](https://devkit.dev/docs)
+- [Website](https://blueprintkit.dev)
+- [Documentation](https://blueprintkit.dev/docs)
 - [GitHub](https://github.com/vickcoo/devkit)
 - [Issues](https://github.com/vickcoo/devkit/issues)
 

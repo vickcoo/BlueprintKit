@@ -1,6 +1,6 @@
-# DevKit Templates
+# BlueprintKit Templates
 
-This directory contains production-ready project templates for DevKit CLI.
+This directory contains production-ready project templates for BlueprintKit CLI.
 
 ## Available Templates
 
@@ -27,7 +27,7 @@ This directory contains production-ready project templates for DevKit CLI.
 
 **Get started:**
 ```bash
-devkit init -t nextjs-tailwind
+blueprintkit init -t nextjs-tailwind
 cd your-project
 npm run dev
 ```
@@ -59,7 +59,7 @@ npm run dev
 
 **Get started:**
 ```bash
-devkit init -t express-typescript
+blueprintkit init -t express-typescript
 cd your-project
 cp .env.example .env
 npm run dev
@@ -90,7 +90,7 @@ npm run dev
 
 **Get started:**
 ```bash
-devkit init -t react-native-expo
+blueprintkit init -t react-native-expo
 cd your-project
 npm start
 ```
@@ -205,5 +205,5 @@ All templates are licensed under MIT unless otherwise specified.
 ## Support
 
 For issues or questions about templates:
-- [GitHub Issues](https://github.com/yourusername/devkit/issues)
-- [Documentation](https://devkit.dev/templates)
+- [GitHub Issues](https://github.com/vickcoo/devkit/issues)
+- [Documentation](https://blueprintkit.dev/templates)
