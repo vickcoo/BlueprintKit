@@ -1,0 +1,12 @@
+# Commit Message Mapping: Old → New (Conventional Commits)
+# Format: OLD_MESSAGE|NEW_MESSAGE
+
+Initial commit: DevKit MVP ready for launch|feat: initial DevKit MVP
+Update GitHub links to vickcoo/devkit|docs: update GitHub links to vickcoo/devkit
+Add internal planning documents to .gitignore|chore(git): add internal docs to .gitignore
+Add MIT License for open source|chore: add MIT License
+Rebrand to BlueprintKit|refactor: rebrand project to BlueprintKit
+Fix README: update branding, links, and add CONTRIBUTING|docs(readme): update branding and add CONTRIBUTING
+Complete branding update: fix all remaining references|refactor: complete BlueprintKit branding update
+Remove internal documentation from public repo|chore: remove internal documentation
+Add AGENTS.md for AI coding assistants|docs: add AGENTS.md for AI assistants
