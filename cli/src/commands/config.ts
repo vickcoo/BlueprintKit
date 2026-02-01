@@ -18,8 +18,8 @@ export async function configCommand(action?: string, value?: string): Promise<vo
         logger.info('No configuration set yet');
         logger.log('');
         logger.log('Set configuration:');
-        logger.log('  devkit config set author "Your Name"');
-        logger.log('  devkit config set apiKey "your-api-key"');
+        logger.log('  blueprintkit config set author "Your Name"');
+        logger.log('  blueprintkit config set apiKey "your-api-key"');
         return;
       }
 
@@ -69,11 +69,11 @@ export async function configCommand(action?: string, value?: string): Promise<vo
         logger.error(`Unknown action: ${action}`);
         logger.log('');
         logger.log('Available actions:');
-        logger.log('  devkit config          - Show current config');
-        logger.log('  devkit config set      - Set config value');
-        logger.log('  devkit config get      - Get config value');
-        logger.log('  devkit config delete   - Delete config value');
-        logger.log('  devkit config reset    - Reset all config');
+        logger.log('  blueprintkit config          - Show current config');
+        logger.log('  blueprintkit config set      - Set config value');
+        logger.log('  blueprintkit config get      - Get config value');
+        logger.log('  blueprintkit config delete   - Delete config value');
+        logger.log('  blueprintkit config reset    - Reset all config');
         process.exit(1);
     }
 

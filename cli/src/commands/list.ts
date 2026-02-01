@@ -67,8 +67,8 @@ export async function listCommand(options: ListOptions = {}): Promise<void> {
     logger.info(`Total: ${templates.length} template(s)`);
     logger.log('');
     logger.log('Usage:');
-    logger.log('  devkit init --template <template-name>');
-    logger.log('  devkit init (interactive mode)');
+    logger.log('  blueprintkit init --template <template-name>');
+    logger.log('  blueprintkit init (interactive mode)');
     logger.log('');
 
   } catch (error) {

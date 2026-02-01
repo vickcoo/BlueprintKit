@@ -22,7 +22,7 @@
     "template",
     "boilerplate",
     "generator",
-    "devkit",
+    "blueprintkit",
     "nextjs",
     "react",
     "vue",
@@ -40,10 +40,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vickcoo/devkit.git"
+    "url": "https://github.com/vickcoo/BlueprintKit.git"
   },
   "bugs": {
-    "url": "https://github.com/vickcoo/devkit/issues"
+    "url": "https://github.com/vickcoo/BlueprintKit/issues"
   },
   "homepage": "https://blueprintkit.dev",
   "dependencies": {

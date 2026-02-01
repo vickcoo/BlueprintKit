@@ -111,8 +111,8 @@ MIT © Vick
 
 - [Website](https://blueprintkit.dev)
 - [Documentation](https://blueprintkit.dev/docs)
-- [GitHub](https://github.com/vickcoo/devkit)
-- [Issues](https://github.com/vickcoo/devkit/issues)
+- [GitHub](https://github.com/vickcoo/BlueprintKit)
+- [Issues](https://github.com/vickcoo/BlueprintKit/issues)
 
 ---
 

@@ -3,7 +3,7 @@ import path from 'path';
 import os from 'os';
 import { DevKitConfig } from '../types';
 
-const CONFIG_DIR = path.join(os.homedir(), '.devkit');
+const CONFIG_DIR = path.join(os.homedir(), '.blueprintkit');
 const CONFIG_FILE = path.join(CONFIG_DIR, 'config.json');
 
 /**
