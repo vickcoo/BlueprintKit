@@ -3,7 +3,6 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  devtool: 'cheap-module-source-map', // CSP-compliant source maps for Chrome extensions
   entry: {
     background: './src/background/index.ts',
     content: './src/content/index.ts',

@@ -229,36 +229,81 @@ async function replaceTemplateVariables(
 ): Promise<void> {
   const replacements: Record<string, string> = {
     '{{PROJECT_NAME}}': metadata.projectName,
+    '__PROJECT_NAME__': metadata.projectName,
     '{{AUTHOR}}': metadata.author,
+    '__AUTHOR__': metadata.author,
     '{{DESCRIPTION}}': metadata.description || '',
+    '__DESCRIPTION__': metadata.description || '',
     '{{VERSION}}': metadata.version,
-    '{{YEAR}}': new Date().getFullYear().toString()
+    '__VERSION__': metadata.version,
+    '{{YEAR}}': new Date().getFullYear().toString(),
+    '__YEAR__': new Date().getFullYear().toString()
   };
 
-  // Files to process
-  const filesToProcess = [
-    'package.json',
-    'README.md',
-    'LICENSE'
-  ];
+  // Recursively process all text files
+  await processDirectory(targetDir, replacements);
+}
 
-  for (const file of filesToProcess) {
-    const filePath = path.join(targetDir, file);
+/**
+ * Recursively process directory and replace variables
+ */
+async function processDirectory(
+  dir: string,
+  replacements: Record<string, string>
+): Promise<void> {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
 
-    if (await fs.pathExists(filePath)) {
-      try {
-        let content = await fs.readFile(filePath, 'utf-8');
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
 
-        for (const [key, value] of Object.entries(replacements)) {
-          content = content.replace(new RegExp(key, 'g'), value);
+    // Skip excluded directories
+    if (entry.isDirectory()) {
+      const excludedDirs = ['node_modules', '.git', 'dist', '.next', 'build', 'venv', '__pycache__'];
+      if (excludedDirs.includes(entry.name)) {
+        continue;
+      }
+      await processDirectory(fullPath, replacements);
+    } else if (entry.isFile()) {
+      // Only process text files
+      const textExtensions = [
+        '.js', '.ts', '.jsx', '.tsx', '.vue', '.svelte',
+        '.json', '.md', '.txt', '.html', '.css', '.scss',
+        '.go', '.mod', '.py', '.rs', '.java', '.xml', '.yaml', '.yml',
+        '.toml', '.env.example', 'LICENSE', 'Dockerfile'
+      ];
+
+      const shouldProcess = textExtensions.some(ext =>
+        entry.name.endsWith(ext) || entry.name === 'LICENSE'
+      );
+
+      if (shouldProcess) {
+        try {
+          let content = await fs.readFile(fullPath, 'utf-8');
+          let modified = false;
+
+          for (const [key, value] of Object.entries(replacements)) {
+            if (content.includes(key)) {
+              content = content.replace(new RegExp(escapeRegex(key), 'g'), value);
+              modified = true;
+            }
+          }
+
+          if (modified) {
+            await fs.writeFile(fullPath, content, 'utf-8');
+          }
+        } catch (error) {
+          // Skip binary files or files that can't be read
         }
-
-        await fs.writeFile(filePath, content, 'utf-8');
-      } catch (error) {
-        // Continue on error
       }
     }
   }
+}
+
+/**
+ * Escape special regex characters
+ */
+function escapeRegex(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 /**

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>{{PROJECT_NAME}}</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to {{PROJECT_NAME}}</h1>
+        <p>This is an Electron app built with TypeScript</p>
+
+        <div class="info">
+            <p>Node Version: <span id="node-version"></span></p>
+            <p>Chrome Version: <span id="chrome-version"></span></p>
+            <p>Electron Version: <span id="electron-version"></span></p>
+        </div>
+
+        <button id="demo-button">Click Me!</button>
+        <div id="message"></div>
+    </div>
+
+    <script src="./renderer.js"></script>
+</body>
+</html>

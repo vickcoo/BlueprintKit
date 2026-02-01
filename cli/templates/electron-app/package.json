@@ -1,12 +1,13 @@
 {
   "name": "__PROJECT_NAME__",
   "version": "1.0.0",
-  "description": "Electron app with React and TypeScript",
-  "main": "dist/main.js",
+  "description": "Electron app with TypeScript",
+  "main": "dist/main/main.js",
   "scripts": {
-    "dev": "electron .",
-    "build": "tsc && electron-builder",
-    "start": "electron ."
+    "dev": "tsc && electron .",
+    "build": "tsc",
+    "start": "electron .",
+    "package": "electron-builder"
   },
   "keywords": ["electron", "react", "typescript"],
   "author": "__AUTHOR__",

@@ -1,18 +1,11 @@
-import { ref, type Ref } from 'vue'
-
-interface UseFetchReturn<T> {
-  data: Ref<T | null>
-  error: Ref<Error | null>
-  loading: Ref<boolean>
-  execute: () => Promise<void>
-}
+import { ref } from 'vue'
 
 /**
  * Composable for fetching data from an API
  * @param url - The URL to fetch data from
  * @returns Object containing data, error, loading state, and execute function
  */
-export function useFetch<T>(url: string): UseFetchReturn<T> {
+export function useFetch<T = any>(url: string) {
   const data = ref<T | null>(null)
   const error = ref<Error | null>(null)
   const loading = ref(false)

@@ -5,6 +5,13 @@ import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 
+interface RequestWithUser extends Request {
+  user: {
+    userId: string;
+    email: string;
+  };
+}
+
 @ApiTags('posts')
 @ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
@@ -15,7 +22,7 @@ export class PostsController {
   @Post()
   @ApiOperation({ summary: 'Create a new post' })
   @ApiResponse({ status: 201, description: 'Post created successfully' })
-  create(@Body() createPostDto: CreatePostDto, @Request() req) {
+  create(@Body() createPostDto: CreatePostDto, @Request() req: RequestWithUser) {
     return this.postsService.create(createPostDto, req.user.userId);
   }
 
