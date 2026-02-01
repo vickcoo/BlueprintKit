@@ -99,18 +99,120 @@ Have an idea? [Open an issue](https://github.com/vickcoo/devkit/issues) with:
 ### Code Style
 
 - Use TypeScript for CLI code
-- Follow existing code style
+- Follow existing code style (see `.eslintrc` and `.prettierrc`)
 - Run `npm run build` before committing
-- Write clear commit messages
+- Ensure all tests pass
+- Follow conventional commit messages (see below)
+
+### Commit Message Guidelines
+
+**IMPORTANT**: All commits must follow [Conventional Commits](https://www.conventionalcommits.org/) specification.
+
+#### Format
+
+```
+<type>(<scope>): <description>
+```
+
+#### Examples
+
+```bash
+feat(cli): add django-rest template
+fix(web): resolve mobile navigation overflow
+docs(readme): update installation instructions
+refactor: improve template loading logic
+chore(deps): update typescript to 5.3
+```
+
+#### Types
+
+- `feat` - New feature (triggers MINOR version bump)
+- `fix` - Bug fix (triggers PATCH version bump)
+- `docs` - Documentation changes
+- `style` - Code formatting (not affecting functionality)
+- `refactor` - Code restructuring
+- `perf` - Performance improvements
+- `test` - Adding or updating tests
+- `build` - Build system changes
+- `ci` - CI/CD changes
+- `chore` - Maintenance tasks
+
+#### Scopes
+
+- `cli` - CLI tool changes
+- `web` - Website changes
+- `templates` - Template changes
+- `docs` - Documentation changes
+- `deps` - Dependency updates
+
+#### Rules
+
+- Use imperative mood: "add" not "added" or "adds"
+- No capitalization of first letter
+- No period at the end
+- Keep description under 50 characters
+- Make atomic commits (one logical change per commit)
+
+#### Breaking Changes
+
+Indicate breaking changes with `!` or `BREAKING CHANGE` footer:
+
+```bash
+feat(cli)!: change template directory structure
+
+BREAKING CHANGE: Template structure has changed.
+Existing custom templates need to be updated.
+```
+
+### Versioning
+
+BlueprintKit follows [Semantic Versioning](https://semver.org/):
+
+- **MAJOR** (x.0.0) - Breaking changes
+- **MINOR** (0.x.0) - New features (backward compatible)
+- **PATCH** (0.0.x) - Bug fixes (backward compatible)
+
+Your commit type determines version bumps:
+- `feat` → MINOR version bump
+- `fix`, `perf` → PATCH version bump
+- `feat!`, `BREAKING CHANGE` → MAJOR version bump
 
 ### Pull Request Process
 
-1. Update documentation if needed
-2. Test your changes thoroughly
-3. Update the README if you added features
-4. The PR will be reviewed by maintainers
-5. Address any feedback
-6. Once approved, it will be merged!
+1. **Create a feature branch**
+   ```bash
+   git checkout -b feat/your-feature-name
+   ```
+
+2. **Make atomic commits**
+   - Each commit should be a single logical change
+   - Follow conventional commit format
+   - Keep commits small and focused
+
+3. **Update documentation**
+   - Update README if you added features
+   - Add/update comments in code
+   - Update AGENTS.md if changing architecture
+
+4. **Test thoroughly**
+   - Test your changes locally
+   - Ensure `npm run build` succeeds
+   - Verify templates work end-to-end
+
+5. **Submit PR**
+   - Clear title following conventional format
+   - Detailed description of changes
+   - Link related issues (Fixes #123)
+   - Include screenshots for UI changes
+
+6. **Address feedback**
+   - Respond to review comments
+   - Make requested changes
+   - Keep the PR updated
+
+7. **Merge**
+   - Once approved, maintainers will merge
+   - Squash merge is typically used
 
 ## 📄 License
 
