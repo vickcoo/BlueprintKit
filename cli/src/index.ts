@@ -10,7 +10,7 @@ const program = new Command();
 
 // CLI metadata
 program
-  .name('devkit')
+  .name('blueprintkit')
   .description('A powerful CLI tool for scaffolding production-ready projects')
   .version('0.1.0');
 
@@ -40,7 +40,7 @@ program
 // Config command
 program
   .command('config [action] [value]')
-  .description('Manage DevKit configuration')
+  .description('Manage BlueprintKit configuration')
   .action(async (action, value) => {
     await configCommand(action, value);
   });
@@ -49,12 +49,12 @@ program
 program.on('--help', () => {
   console.log('');
   console.log('Examples:');
-  console.log('  $ devkit init                          # Interactive mode');
-  console.log('  $ devkit init -t nextjs-tailwind       # Use specific template');
-  console.log('  $ devkit list                          # List all templates');
-  console.log('  $ devkit list -c backend               # List backend templates');
-  console.log('  $ devkit config                        # Show current config');
-  console.log('  $ devkit config set                    # Set config value');
+  console.log('  $ blueprintkit init                          # Interactive mode');
+  console.log('  $ blueprintkit init -t nextjs-tailwind       # Use specific template');
+  console.log('  $ blueprintkit list                          # List all templates');
+  console.log('  $ blueprintkit list -c backend               # List backend templates');
+  console.log('  $ blueprintkit config                        # Show current config');
+  console.log('  $ blueprintkit config set                    # Set config value');
   console.log('');
 });
 
@@ -66,7 +66,7 @@ try {
 
   // Show help if no command provided
   if (!process.argv.slice(2).length) {
-    console.log(chalk.cyan.bold('\n🛠️  DevKit - Production-Ready Project Scaffolder\n'));
+    console.log(chalk.cyan.bold('\n🛠️  BlueprintKit - Production-Ready Project Scaffolder\n'));
     program.outputHelp();
   }
 } catch (error) {

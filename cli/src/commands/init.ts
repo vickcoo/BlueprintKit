@@ -13,7 +13,7 @@ import { loadConfig } from '../utils/config';
  */
 export async function initCommand(options: InitOptions = {}): Promise<void> {
   try {
-    logger.title('🚀 DevKit Project Initializer');
+    logger.title('🚀 BlueprintKit Project Initializer');
 
     // Load user config
     const config = await loadConfig();

@@ -12,7 +12,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'nextjs-tailwind'),
     techStack: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Shadcn UI', 'ESLint', 'Prettier'],
     category: 'fullstack',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -21,7 +21,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'vue-vite'),
     techStack: ['Vue 3', 'Vite', 'TypeScript', 'Vue Router', 'Pinia', 'ESLint'],
     category: 'fullstack',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
 
@@ -32,7 +32,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'express-typescript'),
     techStack: ['Express', 'TypeScript', 'Jest', 'ESLint', 'Prettier'],
     category: 'backend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -41,7 +41,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'nestjs-api'),
     techStack: ['NestJS', 'TypeScript', 'Prisma', 'JWT', 'Swagger', 'Jest'],
     category: 'backend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -50,7 +50,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'fastapi-python'),
     techStack: ['FastAPI', 'Python', 'SQLAlchemy', 'Pydantic', 'Alembic', 'Uvicorn'],
     category: 'backend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -59,7 +59,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'flask-api'),
     techStack: ['Flask', 'Python', 'Flask-CORS', 'Gunicorn'],
     category: 'backend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -68,7 +68,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'django-rest'),
     techStack: ['Django 5', 'DRF', 'Python', 'ORM', 'Admin Panel'],
     category: 'backend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -77,7 +77,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'golang-fiber'),
     techStack: ['Go 1.23', 'Fiber', 'CORS', 'JSON'],
     category: 'backend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
 
@@ -88,7 +88,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'react-native-expo'),
     techStack: ['React Native', 'Expo', 'TypeScript', 'React Navigation', 'Theme System'],
     category: 'mobile',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
 
@@ -99,7 +99,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'chrome-extension'),
     techStack: ['Chrome Extension', 'TypeScript', 'Webpack', 'Manifest V3'],
     category: 'browser',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -108,7 +108,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'discord-bot'),
     techStack: ['Discord.js v14', 'TypeScript', 'Slash Commands', 'Node.js'],
     category: 'bot',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -117,7 +117,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'telegram-bot'),
     techStack: ['node-telegram-bot-api', 'TypeScript', 'Node.js'],
     category: 'bot',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
 
@@ -128,7 +128,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'astro-blog'),
     techStack: ['Astro', 'Markdown', 'MDX', 'Tailwind CSS', 'RSS'],
     category: 'frontend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
   {
@@ -137,7 +137,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'sveltekit-app'),
     techStack: ['SvelteKit', 'Svelte 5', 'TypeScript', 'Tailwind CSS', 'Vite'],
     category: 'fullstack',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   },
 
@@ -148,7 +148,7 @@ export const BUILT_IN_TEMPLATES: Template[] = [
     localPath: path.join(__dirname, '../../..', 'templates', 'electron-app'),
     techStack: ['Electron', 'React', 'TypeScript', 'Electron Builder'],
     category: 'frontend',
-    author: 'DevKit',
+    author: 'BlueprintKit',
     version: '1.0.0'
   }
 ];
