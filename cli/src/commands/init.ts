@@ -94,20 +94,31 @@ export async function initCommand(options: InitOptions = {}): Promise<void> {
     }
 
     // Step 4: Get additional metadata
-    const { author, description } = await inquirer.prompt([
-      {
-        type: 'input',
-        name: 'author',
-        message: 'Author name:',
-        default: config.author || 'Your Name'
-      },
-      {
-        type: 'input',
-        name: 'description',
-        message: 'Project description:',
-        default: `A project created with ${template.name}`
-      }
-    ]);
+    let author = options.author;
+    let description = options.description;
+
+    // Only prompt if not provided via CLI
+    if (!author || !description) {
+      const prompted = await inquirer.prompt([
+        {
+          type: 'input',
+          name: 'author',
+          message: 'Author name:',
+          default: author || config.author || 'Your Name',
+          when: !author
+        },
+        {
+          type: 'input',
+          name: 'description',
+          message: 'Project description:',
+          default: description || `A project created with ${template.name}`,
+          when: !description
+        }
+      ]);
+
+      author = author || prompted.author;
+      description = description || prompted.description;
+    }
 
     // Step 5: Confirm installation
     if (!options.skipInstall) {
@@ -144,8 +155,8 @@ export async function initCommand(options: InitOptions = {}): Promise<void> {
 
     const metadata: ProjectMetadata = {
       projectName: projectName!,
-      author,
-      description,
+      author: author || 'Your Name',
+      description: description || `A project created with ${template.name}`,
       version: '0.1.0',
       createdAt: new Date().toISOString()
     };

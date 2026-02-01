@@ -21,6 +21,8 @@ program
   .option('-t, --template <name>', 'Template name')
   .option('-n, --name <name>', 'Project name')
   .option('-d, --directory <path>', 'Target directory')
+  .option('-a, --author <name>', 'Author name')
+  .option('--description <text>', 'Project description')
   .option('--skip-install', 'Skip dependency installation')
   .option('--no-git', 'Skip git initialization')
   .action(async (options) => {

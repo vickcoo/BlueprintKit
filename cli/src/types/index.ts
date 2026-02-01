@@ -24,6 +24,8 @@ export interface InitOptions {
   template?: string;
   name?: string;
   directory?: string;
+  author?: string;
+  description?: string;
   skipInstall?: boolean;
   git?: boolean;
 }
