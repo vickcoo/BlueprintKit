@@ -1,6 +1,6 @@
 {
   "name": "blueprintkit",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Scaffold production-ready projects in seconds with AI-powered templates. Next.js, React Native, Express, NestJS, and 15+ more frameworks.",
   "main": "dist/index.js",
   "bin": {
