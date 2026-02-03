@@ -4,19 +4,28 @@ import { Github, Twitter, Terminal } from 'lucide-react';
 
 const navigation = {
   product: [
+    { name: 'Features', href: '#features' },
     { name: 'Templates', href: '#templates' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Roadmap', href: '#' },
+    { name: 'Get Started', href: '#get-started' },
+    { name: 'Roadmap', href: '#roadmap' },
   ],
   resources: [
-    { name: 'Documentation', href: '#' },
     { name: 'GitHub', href: 'https://github.com/vickcoo/BlueprintKit' },
-    { name: 'Blog', href: '#' },
+    {
+      name: 'Templates Repo',
+      href: 'https://github.com/vickcoo/BlueprintKit/tree/main/templates',
+    },
+    { name: 'npm Package', href: 'https://www.npmjs.com/package/blueprintkit' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' },
-    { name: 'Privacy', href: '#' },
+    {
+      name: 'License',
+      href: 'https://github.com/vickcoo/BlueprintKit/blob/main/LICENSE',
+    },
+    {
+      name: 'Contributing',
+      href: 'https://github.com/vickcoo/BlueprintKit/blob/main/CONTRIBUTING.md',
+    },
   ],
   social: [
     {
@@ -40,8 +49,7 @@ export default function Footer() {
               <span className="text-xl font-bold">BlueprintKit</span>
             </div>
             <p className="mb-4 max-w-xs text-sm text-muted-foreground">
-              Production-ready templates that save developers 4-8 hours per
-              project.
+              Production-ready templates for modern stacks and fast teams.
             </p>
             <div className="flex gap-4">
               {navigation.social.map((item) => {
@@ -117,8 +125,8 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} DevKit. All rights reserved.
-            Built with Next.js and Tailwind CSS.
+            &copy; {new Date().getFullYear()} BlueprintKit. Open-source MIT
+            license. Built with Next.js and Tailwind CSS.
           </p>
         </div>
       </div>
