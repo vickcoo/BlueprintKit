@@ -3,7 +3,8 @@ import ProblemStatement from '@/components/ProblemStatement';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import TemplateShowcase from '@/components/TemplateShowcase';
-import Pricing from '@/components/Pricing';
+import OpenSource from '@/components/OpenSource';
+import Roadmap from '@/components/Roadmap';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
@@ -13,9 +14,10 @@ export default function Home() {
       <Hero />
       <ProblemStatement />
       <Features />
-      <HowItWorks />
       <TemplateShowcase />
-      <Pricing />
+      <HowItWorks />
+      <OpenSource />
+      <Roadmap />
       <CTASection />
       <Footer />
     </main>
