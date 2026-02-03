@@ -1,65 +1,62 @@
 'use client';
 
-import { Layers, Sparkles, Store } from 'lucide-react';
+import { Boxes, CheckCircle2, Gauge, Layers } from 'lucide-react';
 
 const features = [
   {
     icon: Layers,
-    title: 'Curated Templates',
+    title: 'Curated stacks, ready now',
     description:
-      'Production-ready templates for Next.js, Express, React Native, and more. Battle-tested configurations that just work.',
-    available: true,
+      '15+ templates maintained for production with strict TypeScript, linting, and best practices.',
   },
   {
-    icon: Sparkles,
-    title: 'AI Customization',
+    icon: CheckCircle2,
+    title: 'No broken defaults',
     description:
-      'Describe what you need in plain English and let AI customize your template. No more manual config editing.',
-    available: false,
-    badge: 'Coming Soon',
+      'Every template ships with working scripts, sensible configs, and predictable structure.',
   },
   {
-    icon: Store,
-    title: 'Community Marketplace',
+    icon: Gauge,
+    title: 'Faster onboarding',
     description:
-      'Share your templates and earn money. Browse thousands of specialized templates created by the community.',
-    available: false,
-    badge: 'Phase 2',
+      'Consistent project layouts mean teams can move between stacks without relearning.',
+  },
+  {
+    icon: Boxes,
+    title: 'Modern by default',
+    description:
+      'Next.js, NestJS, Expo, FastAPI, Electron, and more—all aligned with current best practices.',
   },
 ];
 
 export default function Features() {
   return (
-    <section className="px-6 py-24 lg:px-8">
+    <section id="features" className="px-6 py-24 lg:px-10">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Production-Ready Templates in{' '}
-            <span className="gradient-text">One Command</span>
-          </h2>
-          <p className="mx-auto mb-16 max-w-2xl text-lg text-muted-foreground">
-            Everything you need to start building immediately, with best
-            practices baked in.
-          </p>
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
+              Built for teams who <span className="gradient-text">ship fast</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              BlueprintKit keeps the tooling consistent so every project starts
+              clean, modern, and ready to scale.
+            </p>
+          </div>
+          <div className="text-sm uppercase tracking-[0.25em] text-muted-foreground">
+            what you get today
+          </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="relative overflow-hidden rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/50 hover:shadow-lg"
+                className="relative overflow-hidden rounded-2xl border border-border bg-card/70 p-8 transition-all hover:border-primary/50 hover:shadow-lg"
               >
-                {!feature.available && (
-                  <div className="absolute right-4 top-4">
-                    <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-                      {feature.badge}
-                    </span>
-                  </div>
-                )}
-
-                <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3">
+                <div className="mb-4 inline-flex rounded-lg bg-primary/15 p-3">
                   <Icon className="h-6 w-6 text-primary" />
                 </div>
 
